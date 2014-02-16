@@ -25,21 +25,10 @@ module.exports = (grunt) ->
 				options:
 					sourceMap: true
 				files: [
-					"build/js/vibrate.js": 'src/coffee/vibrate.coffee'
 					"build/jquery/jquery.vibrate.js": 'src/coffee/jquery.vibrate.coffee'
 				]
 
 		uglify:
-			compile:
-				options:
-					mangle: false
-					compress: true
-					sourceMap: true
-					banner: banner
-					sourceMapIn: "build/js/vibrate.js.map"
-				files: [
-					"build/js/vibrate.min.js": "build/js/vibrate.js"
-				]
 			compileJquery:
 				options:
 					mangle: false
@@ -77,10 +66,6 @@ module.exports = (grunt) ->
 				options:
 					vendor: "http://code.jquery.com/jquery-1.11.0.min.js"
 					specs: "test/test.jquery.js"
-			test:
-				src: "build/js/vibrate.js"
-				options:
-					specs: "test/test.vibrate.js"
 
 		watch:
 			live:
@@ -100,9 +85,6 @@ module.exports = (grunt) ->
 			js:
 				files: ['src/coffee/*.coffee']
 				tasks: ['coffee', "uglify"]
-			karmaVibrate:
-				files: ["build/js/vibrate.min.js", "test/test.vibrate.js"]
-				tasks: ["jasmine:test"]
 			karmaJquery:
 				files: ["build/jquery/jquery.vibrate.min.js", "test/test.jquery.js"]
 				tasks: ["jasmine:jquery"]

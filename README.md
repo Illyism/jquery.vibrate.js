@@ -47,3 +47,9 @@ $(".button").vibrate({
     trigger: "touchstart"
 });
 ```
+
+
+Development
+-----------
+
+I'm using grunt and node for building the docs. Grunt and jasmine for testing. Check out the gruntfile.

@@ -67,18 +67,18 @@ block content
 		i.icon.circle
 
 	.example.five
-		.ui.button.fluid.teal Vibrate for 40ms on touchstart
+		.ui.button.fluid.teal Keep vibrating whilst touching (up to 2000ms)
 		.ui.divider.icon.horizontal
 			i.icon.code
 		pre
 			code.javascript.
 				$(".example.five .button").vibrate({
-					duration: 40,
+					duration: 2000,
 					trigger: "touchstart"
 				});
 		script.
 			$(".example.five .button").vibrate({
-				duration: 40,
+				duration: 2000,
 				trigger: "touchstart"
 			});
 

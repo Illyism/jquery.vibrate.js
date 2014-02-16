@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
-    <script type="text/javascript" src="build/js/vibrate.min.js"></script>
     <script type="text/javascript" src="build/jquery/jquery.vibrate.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
@@ -30,7 +29,7 @@
     <div class="ui inverted main menu fixed top">
       <div class="container">
         <div class="left menu">
-          <div class="item">Vibration API</div><a href="http://github.com/illyism/vibrate" class="item"><i class="icon github"></i>GitHub</a><a href="https://github.com/Illyism/vibrate/archive/master.zip" class="item"><i class="icon download"></i>Download</a>
+          <div class="item">Vibration API</div><a href="http://github.com/illyism/vibrate.jquery.js" class="item"><i class="icon github"></i>GitHub</a><a href="https://github.com/Illyism/vibrate.jquery.js/archive/master.zip" class="item"><i class="icon download"></i>Download</a>
         </div>
         <div class="right menu"><a href="http://il.ly/vibrate" class="item">Read the Article</a></div>
       </div>
@@ -85,15 +84,15 @@ $(".example.three .button").vibrate(50);</code></pre>
       </div>
       <div class="ui divider icon horizontal"><i class="icon circle"></i></div>
       <div class="example five">
-        <div class="ui button fluid teal">Vibrate for 40ms on touchstart</div>
+        <div class="ui button fluid teal">Keep vibrating whilst touching (up to 2000ms)</div>
         <div class="ui divider icon horizontal"><i class="icon code"></i></div>
         <pre><code class="javascript">$(".example.five .button").vibrate({
- duration: 40,
+ duration: 2000,
  trigger: "touchstart"
 });</code></pre>
         <script>
           $(".example.five .button").vibrate({
-           duration: 40,
+           duration: 2000,
            trigger: "touchstart"
           });
           
