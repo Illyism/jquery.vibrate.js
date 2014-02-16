@@ -1,0 +1,117 @@
+extends base
+block content
+	h1.ui.header jquery.vibrate.js
+
+	p The Vibration API is an API specifically made for mobile devices as they are thankfully the only devices that have a vibrate function. The API allows developers to vibrate a device (in a pattern) for a given duration.
+	p This was published together with my article on the Vibration API, which you can read here: 
+		a(href="http://il.ly/vibrate") il.ly/vibrate.
+	
+	.ui.divider.icon.horizontal
+		i.icon.heart
+	
+	h2.ui.header Usage
+
+	.example.one
+		.ui.button.fluid.teal Vibrate for 50ms on all .button in .example.one on click
+		.ui.divider.icon.horizontal
+			i.icon.code
+		pre
+			code.javascript.
+				$(".example.one .button").vibrate(); 
+		script.
+			$(".example.one .button").vibrate(); 
+
+	.ui.divider.icon.horizontal
+		i.icon.circle
+
+	.example.two
+		.ui.button.fluid.teal Vibrate for 20ms on click
+		.ui.divider.icon.horizontal
+			i.icon.code
+		pre
+			code.javascript.
+				$(".example.two .button").vibrate("short"); 
+		script.
+			$(".example.two .button").vibrate("short");
+
+	.ui.divider.icon.horizontal
+		i.icon.circle
+
+	.example.three
+		.ui.button.fluid.teal Vibrate for 50ms on click
+		.ui.divider.icon.horizontal
+			i.icon.code
+		pre
+			code.javascript.
+				// Either of these
+				$(".example.three .button").vibrate("medium");
+				$(".example.three .button").vibrate("default");
+				$(".example.three .button").vibrate(50);
+		script.
+			$(".example.three .button").vibrate("medium"); 
+
+	.ui.divider.icon.horizontal
+		i.icon.circle
+
+	.example.four
+		.ui.button.fluid.teal Vibrate for 100ms on click
+		.ui.divider.icon.horizontal
+			i.icon.code
+		pre
+			code.javascript.
+				$(".example.four .button").vibrate("long"); 
+		script.
+			$(".example.four .button").vibrate("long");
+
+	.ui.divider.icon.horizontal
+		i.icon.circle
+
+	.example.five
+		.ui.button.fluid.teal Vibrate for 40ms on touchstart
+		.ui.divider.icon.horizontal
+			i.icon.code
+		pre
+			code.javascript.
+				$(".example.five .button").vibrate({
+					duration: 40,
+					trigger: "touchstart"
+				});
+		script.
+			$(".example.five .button").vibrate({
+				duration: 40,
+				trigger: "touchstart"
+			});
+
+	.ui.divider.icon.horizontal
+		i.icon.heart
+
+
+	h3.ui.header How Long is Long Enough?
+	p If you're not sure how long the haptic feedback should be. You can experiment with various timespans. Try all of these buttons out a mobile device. Anything above 100ms seems to long for me.
+
+	.ui.buttons.fluid.example-long.two
+		a.ui.small.tiny.black.button 10
+		a.ui.small.tiny.black.button 20
+		a.ui.small.tiny.black.button 30
+		a.ui.small.tiny.black.button 40
+		a.ui.small.tiny.black.button 50
+		a.ui.small.tiny.black.button 75
+		a.ui.small.tiny.black.button 100
+		a.ui.small.tiny.black.button 150
+		a.ui.small.tiny.black.button 200
+		a.ui.small.tiny.black.button 500
+		a.ui.small.tiny.black.button 1000
+		a.ui.small.tiny.black.button 2000
+
+	.ui.divider.icon.horizontal
+		i.icon.code
+	pre
+		code.
+			$(".example-long .button").each(function() {
+				$(this).vibrate(parseInt($(this).text(), 10));
+			});
+
+		script.
+			$(".example-long .button").each(function() {
+				$(this).vibrate(parseInt($(this).text(), 10));
+			});

@@ -1,0 +1,28 @@
+doctype html
+html
+	head(lang="en")
+		title #{title}
+		include inc/meta
+		link(rel="stylesheet", href="http://yandex.st/highlightjs/8.0/styles/default.min.css")
+		link(rel="stylesheet", href="css/style.css", type="text/css")
+		script(type="text/javascript", src="http://code.jquery.com/jquery-1.11.0.min.js")
+		script(type="text/javascript", src="http://yandex.st/highlightjs/8.0/highlight.min.js")
+		script(type="text/javascript", src="build/js/vibrate.min.js")
+		script(type="text/javascript", src="build/jquery/jquery.vibrate.min.js")
+		script.
+			hljs.initHighlightingOnLoad();
+	body
+		.ui.inverted.main.menu.fixed.top
+			.container
+				.left.menu
+					.item Vibration API
+					a(href="http://github.com/illyism/vibrate").item
+						i.icon.github
+						| GitHub
+					a(href="https://github.com/Illyism/vibrate/archive/master.zip").item
+						i.icon.download
+						| Download
+				.right.menu
+					a(href="http://il.ly/vibrate").item Read the Article
+		.page.container
+			block content

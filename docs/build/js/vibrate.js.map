@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "vibrate.js",
+  "sourceRoot": "../../src/coffee/",
+  "sources": [
+    "vibrate.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA;AAAA,EAAA,YAAA,CAAA;AAEA;AAAA;;;;;;;;;;;;;;;;KAFA;AAAA,EAoBA,OAAO,CAAC,GAAR,CAAY,OAAZ,CApBA,CAAA;AAAA"
+}

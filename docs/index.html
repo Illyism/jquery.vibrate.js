@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="vibration.js">
+    <meta name="keywords" content="vibration, vibrate, javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="images/icon/favicon.ico">
+    <!--if IElink(rel='shortcut icon', href='images/icon/favicon.ico')
+    -->
+    <link rel="apple-touch-icon-precomposed" href="images/icon/favicon-152.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="favicon-144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/icon/favicon-152.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icon/favicon-144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/icon/favicon-120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icon/favicon-114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icon/favicon-72.png">
+    <link rel="apple-touch-icon-precomposed" href="images/icon/favicon-57.png">
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <script type="text/javascript" src="build/js/vibrate.min.js"></script>
+    <script type="text/javascript" src="build/jquery/jquery.vibrate.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+    <div class="ui inverted main menu fixed top">
+      <div class="container">
+        <div class="left menu">
+          <div class="item">Vibration API</div><a href="http://github.com/illyism/vibrate" class="item"><i class="icon github"></i>GitHub</a><a href="https://github.com/Illyism/vibrate/archive/master.zip" class="item"><i class="icon download"></i>Download</a>
+        </div>
+        <div class="right menu"><a href="http://il.ly/vibrate" class="item">Read the Article</a></div>
+      </div>
+    </div>
+    <div class="page container">
+      <h1 class="ui header">jquery.vibrate.js</h1>
+      <p>The Vibration API is an API specifically made for mobile devices as they are thankfully the only devices that have a vibrate function. The API allows developers to vibrate a device (in a pattern) for a given duration.</p>
+      <p>This was published together with my article on the Vibration API, which you can read here: <a href="http://il.ly/vibrate">il.ly/vibrate.</a></p>
+      <div class="ui divider icon horizontal"><i class="icon heart"></i></div>
+      <h2 class="ui header">Usage</h2>
+      <div class="example one">
+        <div class="ui button fluid teal">Vibrate for 50ms on all .button in .example.one on click</div>
+        <div class="ui divider icon horizontal"><i class="icon code"></i></div>
+        <pre><code class="javascript">$(".example.one .button").vibrate(); </code></pre>
+        <script>
+          $(".example.one .button").vibrate(); 
+          
+        </script>
+      </div>
+      <div class="ui divider icon horizontal"><i class="icon circle"></i></div>
+      <div class="example two">
+        <div class="ui button fluid teal">Vibrate for 20ms on click</div>
+        <div class="ui divider icon horizontal"><i class="icon code"></i></div>
+        <pre><code class="javascript">$(".example.two .button").vibrate("short"); </code></pre>
+        <script>
+          $(".example.two .button").vibrate("short");
+          
+        </script>
+      </div>
+      <div class="ui divider icon horizontal"><i class="icon circle"></i></div>
+      <div class="example three">
+        <div class="ui button fluid teal">Vibrate for 50ms on click</div>
+        <div class="ui divider icon horizontal"><i class="icon code"></i></div>
+        <pre><code class="javascript">// Either of these
+$(".example.three .button").vibrate("medium");
+$(".example.three .button").vibrate("default");
+$(".example.three .button").vibrate(50);</code></pre>
+        <script>
+          $(".example.three .button").vibrate("medium"); 
+          
+        </script>
+      </div>
+      <div class="ui divider icon horizontal"><i class="icon circle"></i></div>
+      <div class="example four">
+        <div class="ui button fluid teal">Vibrate for 100ms on click</div>
+        <div class="ui divider icon horizontal"><i class="icon code"></i></div>
+        <pre><code class="javascript">$(".example.four .button").vibrate("long"); </code></pre>
+        <script>
+          $(".example.four .button").vibrate("long");
+          
+        </script>
+      </div>
+      <div class="ui divider icon horizontal"><i class="icon circle"></i></div>
+      <div class="example five">
+        <div class="ui button fluid teal">Vibrate for 40ms on touchstart</div>
+        <div class="ui divider icon horizontal"><i class="icon code"></i></div>
+        <pre><code class="javascript">$(".example.five .button").vibrate({
+ duration: 40,
+ trigger: "touchstart"
+});</code></pre>
+        <script>
+          $(".example.five .button").vibrate({
+           duration: 40,
+           trigger: "touchstart"
+          });
+          
+        </script>
+      </div>
+      <div class="ui divider icon horizontal"><i class="icon heart"></i></div>
+      <h3 class="ui header">How Long is Long Enough?</h3>
+      <p>If you're not sure how long the haptic feedback should be. You can experiment with various timespans. Try all of these buttons out a mobile device. Anything above 100ms seems to long for me.</p>
+      <div class="ui buttons fluid example-long two"><a class="ui small tiny black button">10</a><a class="ui small tiny black button">20</a><a class="ui small tiny black button">30</a><a class="ui small tiny black button">40</a><a class="ui small tiny black button">50</a><a class="ui small tiny black button">75</a><a class="ui small tiny black button">100</a><a class="ui small tiny black button">150</a><a class="ui small tiny black button">200</a><a class="ui small tiny black button">500</a><a class="ui small tiny black button">1000</a><a class="ui small tiny black button">2000</a></div>
+      <div class="ui divider icon horizontal"><i class="icon code"></i></div>
+      <pre><code>$(".example-long .button").each(function() {
+ $(this).vibrate(parseInt($(this).text(), 10));
+});
+</code>
+        <script>$(".example-long .button").each(function() {
+ $(this).vibrate(parseInt($(this).text(), 10));
+});
+        </script></pre>
+    </div>
+  </body>
+</html>
