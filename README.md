@@ -1,3 +1,7 @@
+
+This library was to be published hand-to-hand with my article on the [Vibration API]](http://www.illyism.com/journal/vibration-api). You can also view the [documentation](http://illyism.github.io/jquery.vibrate.js).
+
+
 > Does my Device Support the API?
 
 The vibration API is implemented in `navigator.vibrate`. So calling the function makes your phone vibrate. You can test if your browser is recent enough to have the `vibrate` function in `navigator`.
