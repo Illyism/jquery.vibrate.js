@@ -1,5 +1,5 @@
 
-This library was to be published hand-to-hand with my article on the [Vibration API]](http://www.illyism.com/journal/vibration-api). You can also view the [documentation](http://illyism.github.io/jquery.vibrate.js).
+This library was to be published hand-to-hand with my article on the [Vibration API](http://www.illyism.com/journal/vibration-api). You can also view the [documentation](http://illyism.github.io/jquery.vibrate.js).
 
 
 > Does my Device Support the API?
