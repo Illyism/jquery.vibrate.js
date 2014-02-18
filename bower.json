@@ -1,0 +1,21 @@
+{
+  "name": "jquery.vibrate.js",
+  "version": "1.1.1",
+  "authors": [
+    "Ilias Ismanalijev <hello@illyism.com>"
+  ],
+  "description": "jQuery Vibration wrapper for the Vibration API",
+  "main": "build/jquery/jquery.vibrate.min.js",
+  "keywords": [
+    "jquery",
+    "vibration",
+    "vibrate"
+  ],
+  "license": "GPLv3",
+  "homepage": "http://il.ly/vibrate",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "test"
+  ]
+}
