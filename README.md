@@ -28,6 +28,10 @@ Usage
 
 ### jquery.vibrate.js
 
+You can embed using bower with `bower install jquery.vibrate.js`. Or you can download the zip file and extract the build/jquery/* files.
+
+The javascript files are located in **build/jquery/jquery.vibrate.min.js**.
+
 > Download and embed the code then initialize in one of the following ways.
 
 ```javascript
