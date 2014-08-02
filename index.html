@@ -143,17 +143,22 @@ item.vibrate(50);</code></pre>
         </div>
         <div class="sixteen wide column">
           <div class="example">
-            <pre><code class="javascript">$(".checkbox").vibrate(
+            <pre><code class="javascript">$("#example-checkbox .checkbox").vibrate(
  pattern: [5, 200, 20]
 );</code></pre>
             <div class="title">Check Boxes</div>
             <div class="description">Another good use case is check boxes.</div>
-            <div class="ui fluid orange inverted segment">
+            <div id="example-checkbox" class="ui fluid orange inverted segment">
               <div class="ui slider checkbox">
                 <input id="product-1" type="checkbox">
                 <label for="product-1">Check This!</label>
               </div>
             </div>
+            <script>
+              $("#example-checkbox .checkbox").vibrate(
+               pattern: [5, 200, 20]
+              );
+            </script>
           </div>
         </div>
       </div>
