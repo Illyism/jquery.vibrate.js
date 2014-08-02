@@ -1,117 +1,131 @@
 extends base
 block content
-	h1.ui.header jquery.vibrate.js
-
 	p The Vibration API is an API specifically made for mobile devices as they are thankfully the only devices that have a vibrate function. The API allows developers to vibrate a device (in a pattern) for a given duration.
-	p This was published together with my article on the Vibration API, which you can read here: 
-		a(href="http://il.ly/vibrate") il.ly/vibrate.
 	
-	.ui.divider.icon.horizontal
-		i.icon.heart
-	
-	h2.ui.header Usage
+	p This plugins allow you to use the API in an easy way together with jQuery.
 
-	.example.one
-		.ui.button.fluid.teal Vibrate for 50ms on all .button in .example.one on click
-		.ui.divider.icon.horizontal
-			i.icon.code
-		pre
-			code.javascript.
-				$(".example.one .button").vibrate(); 
-		script.
-			$(".example.one .button").vibrate(); 
+	h2.ui.header Examples
 
-	.ui.divider.icon.horizontal
-		i.icon.circle
+	.ui.grid.two.column.stackable
+		.column
+			#example-one
+				.example
+					pre
+						code.javascript.
+							$("#example-one .button").vibrate(); 
+					.title Example One
+					.description Vibrate for 50ms on all .button in .example.one on click
+					.ui.button.fluid.orange Try It!
+					script.
+						$("#example-one .button").vibrate(); 
 
-	.example.two
-		.ui.button.fluid.teal Vibrate for 20ms on click
-		.ui.divider.icon.horizontal
-			i.icon.code
-		pre
-			code.javascript.
-				$(".example.two .button").vibrate("short"); 
-		script.
-			$(".example.two .button").vibrate("short");
+			#example-two
+				.example
+					pre
+						code.javascript.
+							$("#example-two .button").vibrate("short"); 
+					.title Example Two
+					.description Vibrate for 20ms on click
+					.ui.button.fluid.orange Try It!
+					script.
+						$("#example-two .button").vibrate("short");
 
-	.ui.divider.icon.horizontal
-		i.icon.circle
+			#example-three
+				.example
+					pre
+						code.javascript.
+							var item = $("#example-three .button");
+							// Either of these
+							item.vibrate("medium");
+							item.vibrate("default");
+							item.vibrate(50);
+					.title Example Three
+					.description Vibrate for 50ms on click
+					.ui.button.fluid.orange Try It!
+					script.
+						$("#example-three .button").vibrate("medium"); 
+		.column
+			#example-four.column
+				.example
+					pre
+						code.javascript.
+							$("#example-four .button").vibrate("long"); 
+					.title Example Four
+					.description Vibrate for 100ms on click
+					.ui.button.fluid.orange Try It!
+					script.
+						$("#example-four .button").vibrate("long");
 
-	.example.three
-		.ui.button.fluid.teal Vibrate for 50ms on click
-		.ui.divider.icon.horizontal
-			i.icon.code
-		pre
-			code.javascript.
-				// Either of these
-				$(".example.three .button").vibrate("medium");
-				$(".example.three .button").vibrate("default");
-				$(".example.three .button").vibrate(50);
-		script.
-			$(".example.three .button").vibrate("medium"); 
+			#example-five.column
+				.example
+					pre
+						code.javascript.
+							$("#example-five .button").vibrate({
+								duration: 2000,
+								trigger: "touchstart"
+							});
+					.title Example Five
+					.description Keep vibrating whilst touching (up to 2000ms)
+					.ui.button.fluid.orange Try It!
+					script.
+						$("#example-five .button").vibrate({
+							duration: 2000,
+							trigger: "touchstart"
+						});
 
-	.ui.divider.icon.horizontal
-		i.icon.circle
+			#example-six.column
+				.example
+					pre
+						code.javascript.
+							$("#example-six .button").vibrate({
+								pattern: [20, 200, 20]
+							});
+					.title Example Six
+					.description Vibrate twice.
+					.ui.button.fluid.orange Try It!
+					script.
+						$("#example-six .button").vibrate({
+							pattern: [20, 200, 20]
+						});
 
-	.example.four
-		.ui.button.fluid.teal Vibrate for 100ms on click
-		.ui.divider.icon.horizontal
-			i.icon.code
-		pre
-			code.javascript.
-				$(".example.four .button").vibrate("long"); 
-		script.
-			$(".example.four .button").vibrate("long");
+		.sixteen.wide.column
+			.example
+				pre
+					code.javascript.
+						$(".example-long .button").each(function() {
+							$(this).vibrate(parseInt($(this).text(), 10));
+						});
+				.title How Long is Long Enough?
+				.description If you're not sure how long the haptic feedback should be. You can experiment with various timespans. Try all of these buttons out a mobile device. Anything above 100ms seems to long for me.
 
-	.ui.divider.icon.horizontal
-		i.icon.circle
+				.ui.buttons.fluid.example-long.two
+					a.ui.small.tiny.orange.button 10
+					a.ui.small.tiny.orange.button 20
+					a.ui.small.tiny.orange.button 30
+					a.ui.small.tiny.orange.button 40
+					a.ui.small.tiny.orange.button 50
+					a.ui.small.tiny.orange.button 75
+					a.ui.small.tiny.orange.button 100
+					a.ui.small.tiny.orange.button 150
+					a.ui.small.tiny.orange.button 200
+					a.ui.small.tiny.orange.button 500
+					a.ui.small.tiny.orange.button 1000
+					a.ui.small.tiny.orange.button 2000
+					script.
+						$(".example-long .button").each(function() {
+							$(this).vibrate(parseInt($(this).text(), 10));
+						});
 
-	.example.five
-		.ui.button.fluid.teal Keep vibrating whilst touching (up to 2000ms)
-		.ui.divider.icon.horizontal
-			i.icon.code
-		pre
-			code.javascript.
-				$(".example.five .button").vibrate({
-					duration: 2000,
-					trigger: "touchstart"
-				});
-		script.
-			$(".example.five .button").vibrate({
-				duration: 2000,
-				trigger: "touchstart"
-			});
-
-	.ui.divider.icon.horizontal
-		i.icon.heart
-
-
-	h3.ui.header How Long is Long Enough?
-	p If you're not sure how long the haptic feedback should be. You can experiment with various timespans. Try all of these buttons out a mobile device. Anything above 100ms seems to long for me.
-
-	.ui.buttons.fluid.example-long.two
-		a.ui.small.tiny.black.button 10
-		a.ui.small.tiny.black.button 20
-		a.ui.small.tiny.black.button 30
-		a.ui.small.tiny.black.button 40
-		a.ui.small.tiny.black.button 50
-		a.ui.small.tiny.black.button 75
-		a.ui.small.tiny.black.button 100
-		a.ui.small.tiny.black.button 150
-		a.ui.small.tiny.black.button 200
-		a.ui.small.tiny.black.button 500
-		a.ui.small.tiny.black.button 1000
-		a.ui.small.tiny.black.button 2000
-
-	.ui.divider.icon.horizontal
-		i.icon.code
-	pre
-		code.
-			$(".example-long .button").each(function() {
-				$(this).vibrate(parseInt($(this).text(), 10));
-			});
-
-		script.
-			$(".example-long .button").each(function() {
-				$(this).vibrate(parseInt($(this).text(), 10));
-			});
+		.sixteen.wide.column
+			.example
+				pre
+					code.javascript.
+						$(".checkbox").vibrate(
+							pattern: [5, 200, 20]
+						);
+				.title Check Boxes
+				.description Another good use case is check boxes.
+				.ui.fluid.orange.inverted.segment
+					.ui.slider.checkbox
+						input(id="product-1", type="checkbox")
+						label(for="product-1") Check This!

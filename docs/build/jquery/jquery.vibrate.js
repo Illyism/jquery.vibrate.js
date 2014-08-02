@@ -94,9 +94,9 @@
         $this.bind($this.defaults.trigger, function() {
           debug("Vibrate " + $this.defaults.duration + "ms");
           if ("vibrate" in navigator) {
-            return navigator.vibrate($this.defaults.duration);
+            return navigator.vibrate($this.defaults.pattern || $this.defaults.duration);
           } else if ("mozVibrate" in navigator) {
-            return navigator.mozVibrate($this.defaults.duration);
+            return navigator.mozVibrate($this.defaults.pattern || $this.defaults.duration);
           }
         });
         if ((triggerStop != null)) {

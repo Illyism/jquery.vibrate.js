@@ -77,9 +77,9 @@ $.fn.vibrate = (options) ->
 			$this.bind $this.defaults.trigger, () ->
 				debug "Vibrate #{$this.defaults.duration}ms"
 				if "vibrate" of navigator
-					navigator.vibrate $this.defaults.duration
+					navigator.vibrate $this.defaults.pattern or $this.defaults.duration
 				else if "mozVibrate" of navigator
-					navigator.mozVibrate $this.defaults.duration
+					navigator.mozVibrate $this.defaults.pattern or $this.defaults.duration
 			if (triggerStop?)
 				$this.bind triggerStop, () ->
 					debug "Vibrate Stop"
