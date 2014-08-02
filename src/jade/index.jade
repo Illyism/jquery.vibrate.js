@@ -119,9 +119,9 @@ block content
 			.example
 				pre
 					code.javascript.
-						$("#example-checkbox .checkbox").vibrate(
+						$("#example-checkbox .checkbox").vibrate({
 							pattern: [5, 200, 20]
-						);
+						});
 				.title Check Boxes
 				.description Another good use case is check boxes.
 				.ui.fluid.orange.inverted.segment#example-checkbox
@@ -129,6 +129,6 @@ block content
 						input(id="product-1", type="checkbox")
 						label(for="product-1") Check This!
 				script.
-					$("#example-checkbox .checkbox").vibrate(
+					$("#example-checkbox .checkbox").vibrate({
 						pattern: [5, 200, 20]
-					);
+					});
