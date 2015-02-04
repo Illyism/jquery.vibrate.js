@@ -10,7 +10,12 @@ describe("Initializing", function() {
 
 	it("Fails without navigator.vibrate", function() {
 		$(".button").vibrate({debug: true});
-		expect($(".button").attr("class")).not.toBe("button vibrate");
+
+		if ("vibrate" in navigator || "mozVibrate" in navigator	)
+			expect($(".button").attr("class")).toBe("button vibrate");
+		else
+			expect($(".button").attr("class")).not.toBe("button vibrate");
+
 	});
 
 	it("Works with navigator.mozVibrate", function() {
@@ -37,6 +42,23 @@ describe("Initializing", function() {
 		});
 		expect($(".button").attr("class")).toBe("button bzzz");
 	});
+
+	it("Allows chaining", function() {
+		navigator.vibrate = function(pattern) {
+			console.log("Vibrating", pattern);
+		};
+		$(".button")
+			.vibrate()
+			.text("hello");
+		expect($(".button").text()).toBe("hello");
+		navigator.vibrate = navigator.mozVibrate = null;
+		delete navigator.vibrate; delete navigator.mozVibrate;
+		$(".button")
+			.vibrate()
+			.text("world");
+		expect($(".button").text()).toBe("world");
+	});
+
 
 });
 

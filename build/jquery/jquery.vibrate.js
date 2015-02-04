@@ -65,7 +65,9 @@
     }
     canVibrate = "vibrate" in navigator || "mozVibrate" in navigator;
     debug("Can Vibrate = " + canVibrate);
-    if (canVibrate === true) {
+    if (canVibrate === false) {
+      return this;
+    } else if (canVibrate === true) {
       return $(this).each(function() {
         var $this, triggerStop;
         $this = $(this);

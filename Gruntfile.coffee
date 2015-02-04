@@ -65,7 +65,7 @@ module.exports = (grunt) ->
 				src: "build/jquery/jquery.vibrate.js"
 				options:
 					vendor: "http://code.jquery.com/jquery-1.11.0.min.js"
-					specs: "test/test.jquery.js"
+					specs: "test/vibrate.spec.js"
 
 		watch:
 			live:

@@ -46,7 +46,9 @@ $.fn.vibrate = (options) ->
 	canVibrate = "vibrate" of navigator || "mozVibrate" of navigator	
 
 	debug "Can Vibrate = #{canVibrate}"
-	if canVibrate is yes
+	if canVibrate is no
+		this
+	else if canVibrate is yes
 		$(this).each () ->
 			$this = $(this)
 
