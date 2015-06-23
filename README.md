@@ -54,6 +54,12 @@ $(".button").vibrate({
     duration: 40,
     trigger: "touchstart"
 });
+
+// Vibrate twice
+$(".button").vibrate({
+    pattern: [20, 200, 20]
+});
+
 ```
 
 
