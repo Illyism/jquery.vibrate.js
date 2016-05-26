@@ -1,6 +1,6 @@
 {
   "name": "vibrate",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "jQuery Vibration wrapper for the Vibration API",
   "main": "index.js",
   "devDependencies": {
@@ -27,7 +27,7 @@
     "javascript"
   ],
   "author": "Ilias Ismanalijev",
-  "license": "GPLv3",
+  "license": "GPLv2",
   "bugs": {
     "url": "https://github.com/illyism/vibrate/issues"
   },

@@ -1,6 +1,6 @@
 {
   "name": "jquery.vibrate.js",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "authors": [
     "Ilias Ismanalijev <hello@illyism.com>"
   ],
@@ -11,7 +11,7 @@
     "vibration",
     "vibrate"
   ],
-  "license": "GPLv3",
+  "license": "GPLv2",
   "homepage": "http://il.ly/vibrate",
   "ignore": [
     "node_modules",
